@@ -28,3 +28,12 @@ app.get('/orders', (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+const corsOptions = {
+  origin: 'https://iamhrithiknair.github.io/Frontend/', // Replace with your actual GitHub Pages URL
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type']
+};
+
+app.use(cors(corsOptions));
+
